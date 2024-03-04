@@ -10,7 +10,7 @@ function renderApp(){
 
 
     btn.addEventListener("click", () => {
-        fetch(`http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${input.value}`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${input.value}`)
             .then(response => response.json())
             .then(data => {
                 const weatherurl= `${data.current.condition.icon}`
