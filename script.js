@@ -15,17 +15,17 @@ function renderApp(){
                 const result = [data.current.humidity,
                                 data.current.temp_c,
                                 data.current.condition.text,
-                               // data.current.condition.icon,
                                 data.current.wind_kph,
+                                data.location.localtime,
                                 data.current.last_updated
                                ];
-                dataList.forEach(data => {
 
-                   
+                dataList.forEach(data => {
 
                     if(count > result.length-1){
                         return;
                     }
+                    data.textContent = "";
                     data.textContent += ` ${result[count]}`;
                     count++;
                 })
