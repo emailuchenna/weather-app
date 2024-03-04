@@ -1,0 +1,40 @@
+function renderApp(){
+    const input = document.querySelector("input");
+    const dataList = Array.from(document.querySelectorAll(".data"));
+    const myKey = "ad83591b0d2a4f83a9d133144240403";
+    const btn = document.querySelector("#btn")
+    
+
+
+    btn.addEventListener("click", () => {
+        fetch(`http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${input.value}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                let count = 0;
+                const result = [data.current.humidity,
+                                data.current.temp_c,
+                                data.current.condition.text,
+                               // data.current.condition.icon,
+                                data.current.wind_kph,
+                                data.current.last_updated
+                               ];
+                dataList.forEach(data => {
+
+                   
+
+                    if(count > result.length-1){
+                        return;
+                    }
+                    data.textContent += ` ${result[count]}`;
+                    count++;
+                })
+
+                
+            })
+    })
+
+    
+}
+
+renderApp()

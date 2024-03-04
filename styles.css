@@ -1,0 +1,25 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .main {
+    background-image: url('./images/weather-background.PNG'); 
+    background-size: cover;
+    background-position: center;
+    height: 100%; 
+    width: 100%; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: white; 
+    text-align: center; 
+  }
+
+  .container{
+    width: 600px;
+    height: 600px;
+    border: 1px solid #000;
+  }
