@@ -13,7 +13,6 @@ function renderApp(){
         fetch(`http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${input.value}`)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 const weatherurl= `${data.current.condition.icon}`
                 city.innerHTML = `${input.value.toUpperCase()} located in ${data.location.country}`
                 weatherDetails.style.display = `block`;
