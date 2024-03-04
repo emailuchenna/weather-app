@@ -60,6 +60,12 @@ body, html {
     cursor: pointer;
   }
 
+  button:hover{
+    background-color: #7cfc00;
+    color: #f5f5f5;
+    box-shadow: 0 0.5em 0.5em 0 #f5f5f5;
+  }
+
   .merriweather-light {
     font-family: "Merriweather", serif;
     font-weight: 300;

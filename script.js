@@ -40,6 +40,11 @@ function renderApp(){
 
                 
             })
+            .catch(err => {
+                const wrongCity = input.value
+                weatherDetails.innerHTML = `<h2>Oops! ${err.name}. City or location not found</h2>
+                                            <p>Confirm the name of city: ${wrongCity} and try again</p>`
+            })
     })
 
     
