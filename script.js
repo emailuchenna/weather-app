@@ -3,6 +3,7 @@ function renderApp(){
     const dataList = Array.from(document.querySelectorAll(".data"));
     const myKey = "ad83591b0d2a4f83a9d133144240403";
     const btn = document.querySelector("#btn")
+    const weatherIcon = document.querySelector(".weather-icon");
     
 
 
@@ -11,6 +12,9 @@ function renderApp(){
             .then(response => response.json())
             .then(data => {
                 console.log(data);
+                const weatherurl= `${data.current.condition.icon}`
+                weatherIcon.style.backgroundImage = `url(http:${weatherurl})`
+                weatherIcon.style.backgroundRepeat = `no-repeat`
                 let count = 0;
                 const result = [data.current.humidity,
                                 data.current.temp_c,
