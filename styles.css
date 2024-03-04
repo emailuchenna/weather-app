@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: Merriweather, sans-serif;
   }
 
   .main {
@@ -21,10 +22,89 @@ body, html {
   .container{
     width: 600px;
     height: 600px;
-    border: 1px solid #000;
+    padding: 1em;
+  }
+
+  .weather-details{
+    display: none;
+  }
+
+  .weather-details div{
+    margin: 1em auto;
   }
 
   .weather-icon{
+    background-size: cover;
     width: 100px;
     height: 100px;
+    margin: 0 auto;
+    margin-bottom: 0.2em;
   }
+  input,
+  button{
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    margin: 1em auto;
+    border-radius: 10px;
+  }
+
+  input{
+    border: 1px solid transparent;
+    font-size: 1rem;
+  }
+
+  button{
+    background-color: #008000;
+    box-shadow: 0 0.5em 0.5em 0 #000;
+    cursor: pointer;
+  }
+
+  .merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .merriweather-light-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .merriweather-bold-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .merriweather-black {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;  
+  }
+  
+  .merriweather-black-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  

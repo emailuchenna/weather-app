@@ -4,6 +4,8 @@ function renderApp(){
     const myKey = "ad83591b0d2a4f83a9d133144240403";
     const btn = document.querySelector("#btn")
     const weatherIcon = document.querySelector(".weather-icon");
+    const weatherDetails = document.querySelector(".weather-details");
+    const city = document.querySelector(".location");
     
 
 
@@ -13,6 +15,8 @@ function renderApp(){
             .then(data => {
                 console.log(data);
                 const weatherurl= `${data.current.condition.icon}`
+                city.innerHTML = `${input.value.toUpperCase()} located in ${data.location.country}`
+                weatherDetails.style.display = `block`;
                 weatherIcon.style.backgroundImage = `url(http:${weatherurl})`
                 weatherIcon.style.backgroundRepeat = `no-repeat`
                 let count = 0;
@@ -32,6 +36,7 @@ function renderApp(){
                     data.textContent = "";
                     data.textContent += ` ${result[count]}`;
                     count++;
+                    input.value = ``
                 })
 
                 

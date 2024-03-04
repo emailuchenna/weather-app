@@ -5,24 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Weather App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-    <div class="main">
+    <div class="main merriweather-black">
         <div class="container">
-            <div class="icons"></div>
-            <div class="figures">
+            
+            <div class="weather-details">
+
+                <div class="location merriweather-black"></div>
 
                 <div class="weather-icon"></div>
 
-                <div>Humidity: <span class="data"></span> g/kg</div>
-                <div>Temperature: <span class="data"></span> degree celcius</div>
-                <div>Condition: <span class="data"></span></div>
-                <div>Wind Speed: <span class="data"></span> km/hr</div>
-                <div>Estimated Time: <span class="data"></span></div>
-                <div>Last Time Updated: <span class="data"></span></div>
+                <div>Humidity: <span class="data merriweather-black-italic"></span> g/kg</div>
+                <div>Temperature: <span class="data merriweather-black-italic"></span> degree celcius</div>
+                <div>Condition: <span class="data merriweather-black-italic"></span></div>
+                <div>Wind Speed: <span class="data merriweather-black-italic"></span> km/hr</div>
+                <div>Estimated Time: <span class="data merriweather-black-italic"></span></div>
+                <div>Last Time Updated: <span class="data merriweather-black-italic"></span></div>
                 
             </div>
-            <input type="text" id="input-el" placeholder="Enter City"> 
+            <input type="text" id="input-el merriweather-bold" placeholder="Enter City To Get Weather Details"> 
             <button id="btn">Get Weather Details</button>
         </div>
         
