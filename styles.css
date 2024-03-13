@@ -15,7 +15,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center; 
-    color: white; 
+    color: #000; 
     text-align: center; 
   }
 
@@ -27,6 +27,7 @@ body, html {
 
   .weather-details{
     display: none;
+    border: 1px solid #000;
   }
 
   .weather-details div{
@@ -52,18 +53,43 @@ body, html {
   input{
     border: 1px solid transparent;
     font-size: 1rem;
+    margin-bottom: 0;
   }
 
   button{
     background-color: #008000;
     box-shadow: 0 0.5em 0.5em 0 #000;
     cursor: pointer;
+    z-index: 1;    
   }
 
   button:hover{
     background-color: #7cfc00;
     color: #f5f5f5;
     box-shadow: 0 0.5em 0.5em 0 #f5f5f5;
+  }
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; 
+  }
+  ul{
+    position: absolute;
+    z-index: 1;
+  }
+
+  li{
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: #000;
+    padding: 0.3em 0.6em;
+    border: 1px solid transparent;
+    border-top: none;
+  }
+
+  li:hover{
+    background-color: bisque;
   }
 
   .merriweather-light {
