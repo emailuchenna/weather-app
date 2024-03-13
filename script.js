@@ -10,6 +10,7 @@ function renderApp(){
     const city = document.querySelector(".location");
     const main = document.querySelector(".main");
     const ul = document.querySelector("ul");
+    const forecasts = document.querySelector(".forecasts");
     
     const backgroundImages = ["./images/weather-background.PNG", "./images/weather-background2.PNG", 
                               "./images/weather-background3.PNG", "./images/weather-background4.PNG",
@@ -53,7 +54,7 @@ function renderApp(){
     btn.addEventListener("click", fetchWeather)
 
         function fetchWeather(){
-            fetch(`https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${input.value}`)
+            fetch(`https://api.weatherapi.com/v1/forecast.json?key=${myKey}&q=${input.value}&days=5`)
                 .then(response => {
 
                     if(response.ok) return response.json();
@@ -69,7 +70,6 @@ function renderApp(){
                 })
                 .then(data => {
                     //set weather icon 
-                    console.log(data)
                     const weatherurl= `${data.current.condition.icon}`
                     city.innerHTML = `${data.location.name.toUpperCase()} located in ${data.location.country}`
                     weatherDetails.style.display = `block`;
@@ -95,7 +95,8 @@ function renderApp(){
                         data.textContent += `${result[count]}`;
                         count++;
                         input.value = ``;
-                    }) 
+                    })
+                    
                 })
                 .catch(err => { 
                     weatherDetails.style.display = `block`;
@@ -103,9 +104,10 @@ function renderApp(){
                     input.value = ``;
                 })
 
-            
-            
+
         }
+
+
 
 
     
