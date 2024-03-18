@@ -27,7 +27,6 @@ body, html {
 
   .weather-details{
     display: none;
-    border: 1px solid #000;
   }
 
   .weather-details div{
