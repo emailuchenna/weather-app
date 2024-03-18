@@ -53,30 +53,10 @@ function renderApp(){
     //fetches data from weather api
     btn.addEventListener("click", fetchWeather)
 
-<<<<<<< HEAD
+
         function fetchWeather(){
             fetch(`https://api.weatherapi.com/v1/forecast.json?key=${myKey}&q=${input.value}&days=5`)
                 .then(response => {
-=======
-    btn.addEventListener("click", () => {
-        fetch(`https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${input.value}`)
-            .then(response => response.json())
-            .then(data => {
-                const weatherurl= `${data.current.condition.icon}`
-                city.innerHTML = `${input.value.toUpperCase()} located in ${data.location.country}`
-                weatherDetails.style.display = `block`;
-                weatherIcon.style.backgroundImage = `url(http:${weatherurl})`
-                weatherIcon.style.backgroundRepeat = `no-repeat`
-                let count = 0;
-                const result = [data.current.humidity,
-                                data.current.temp_c,
-                                data.current.condition.text,
-                                data.current.wind_kph,
-                                data.location.localtime,
-                                data.current.last_updated
-                               ];
->>>>>>> ccfb2b0e979ea79ff9c919258b9d2ed75abd3f3f
-
                     if(response.ok) return response.json();
 
                     if(response.status >= 400 && response.status < 500){
@@ -123,13 +103,7 @@ function renderApp(){
                     weatherDetails.textContent = err.message;
                     input.value = ``;
                 })
-
-
         }
-
-
-
-
     
     }
 
