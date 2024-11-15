@@ -26,12 +26,13 @@ function renderApp(){
         main.style.backgroundImage = `url(${backgroundImages[index]})`;
         index++;
     }, 5000)
-    //testing purposes
+    /*
+    testing purposes
     fetch(`https://api.weatherapi.com/v1/hustory.json?key=${myKey}`)
         .then(res => res.json())
         .then(data => console.log(data))
         .catch(err=>console.log(error))
-    
+    */
     input.addEventListener("input", () => {
         fetch(`https://api.weatherapi.com/v1/search.json?key=${myKey}&q=${input.value}`)
         .then(res => res.json())
